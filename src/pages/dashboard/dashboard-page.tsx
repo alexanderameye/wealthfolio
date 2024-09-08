@@ -50,13 +50,14 @@ export default function DashboardPage() {
             targetValue={todayValue?.totalValue || 0}
             duration={500}
             currency={todayValue?.currency || 'USD'}
+            displayCurrency={true}
           />
           <div className="flex space-x-3 text-sm">
             <GainAmount
-              className="text-sm font-light "
+              className="text-sm font-light"
               value={todayValue?.totalGainValue || 0}
               currency={todayValue?.currency || 'USD'}
-              displayCurrency={false}
+              displayCurrency={true}
             ></GainAmount>
             <div className="my-1 border-r border-gray-300 pr-2" />
             <GainPercent
@@ -69,7 +70,7 @@ export default function DashboardPage() {
 
       <HistoryChart data={portfolio?.history || []} height={240} />
 
-      <div className="mx-auto w-full bg-gradient-to-b from-custom-green to-background px-12 pt-20 dark:from-custom-green-dark">
+      <div className="mx-auto w-full bg-gradient-to-b to-background px-12 pt-20 dark:from-custom-green-dark">
         {/* Responsive grid */}
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {/* Column 1 */}

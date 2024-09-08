@@ -344,7 +344,7 @@ export const ActivityTable = ({
       <DataTableToolbar table={table} searchBy="assetSymbol" filters={filtersOptions} />
 
       <div
-        className="h-[700px] overflow-y-auto rounded-md border"
+        className="overflow-y-auto rounded-md border"
         onScroll={(e) => fetchMoreOnBottomReachedDebounced(e.target as HTMLDivElement)}
       >
         <Table>
